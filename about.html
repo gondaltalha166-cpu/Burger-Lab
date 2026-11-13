@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">🍔 BURGER LAB</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container reveal">
+        <div class="section-heading">The Art of <span>Burger Making</span></div>
+        <p class="section-sub">From farm-fresh ingredients to sizzling hot grills</p>
+
+        <div class="hero" style="min-height: auto; padding: 20px 0;">
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=700">
+            </div>
+            <div class="hero-text">
+                <div class="card-title" style="font-size: 30px; color: #ff9800;">100% Fresh, Never Frozen</div>
+                <p>We started in a small kitchen with one obsession: crafting the ultimate smash burger. Every morning, our bakers prepare soft potato brioche buns while our butchers grind fresh cuts of halal beef.</p>
+                <p>No preservatives, no frozen patties—just pure flavor seared at 450°F to lock in every drop of juice.</p>
+            </div>
+        </div>
+
+        <div class="stats-grid reveal">
+            <div class="stat-box">
+                <div class="stat-num">50K+</div>
+                <p>Burgers Served</p>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">100%</div>
+                <p>Halal Fresh Meat</p>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">4.9★</div>
+                <p>Customer Rating</p>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">30 Min</div>
+                <p>Hot Delivery</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-modal" id="cart-modal">
+        <div>
+            <div class="cart-header">
+                <h3>Your Order</h3>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+        </div>
+        <div>
+            <div style="display:flex; justify-content:space-between; font-size:20px; font-weight:bold; margin-bottom:15px;">
+                <span>Total:</span>
+                <span id="cart-total" style="color:#ff9800;">Rs. 0</span>
+            </div>
+            <button class="btn" style="width:100%;" onclick="checkoutOrder()">Confirm Order</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Burger Lab. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

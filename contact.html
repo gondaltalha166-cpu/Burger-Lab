@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">🍔 BURGER LAB</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><button class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container reveal">
+        <div class="section-heading">Get In <span>Touch</span></div>
+        <p class="section-sub">Book a table, order catering, or send us your feedback</p>
+
+        <div class="contact-wrapper">
+            <div class="card" style="padding: 30px;">
+                <div class="card-title" style="color: #ff9800; margin-bottom: 15px;">Visit Our Flagship Store</div>
+                <p style="margin-bottom: 12px;">📍 Main Food Street, Block 4, Clifton</p>
+                <p style="margin-bottom: 12px;">📞 +92 300 1234567</p>
+                <p style="margin-bottom: 12px;">⏰ Open Daily: 12:00 PM – 3:00 AM</p>
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600" style="width:100%; border-radius:12px; margin-top:15px;">
+            </div>
+
+            <form onsubmit="event.preventDefault(); alert('Message Sent!');">
+                <input type="text" placeholder="Your Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select>
+                    <option>Table Reservation</option>
+                    <option>Bulk / Party Order</option>
+                    <option>Feedback / Complaint</option>
+                </select>
+                <textarea rows="5" placeholder="Write your message here..." required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="cart-modal" id="cart-modal">
+        <div>
+            <div class="cart-header">
+                <h3>Your Order</h3>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+        </div>
+        <div>
+            <div style="display:flex; justify-content:space-between; font-size:20px; font-weight:bold; margin-bottom:15px;">
+                <span>Total:</span>
+                <span id="cart-total" style="color:#ff9800;">Rs. 0</span>
+            </div>
+            <button class="btn" style="width:100%;" onclick="checkoutOrder()">Confirm Order</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Burger Lab. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
